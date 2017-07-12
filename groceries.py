@@ -1,5 +1,5 @@
 import code
-import operator
+import operator # code.interact(local=locals())
 
 products = products = [
     {"id":1, "name": "Chocolate Sandwich Cookies", "department": "snacks", "aisle": "cookies cakes", "price": 3.50},
@@ -33,4 +33,18 @@ for product in products:
     price_usd = ' (${0:.2f})'.format(product["price"])
     print(" + " + product["name"] + price_usd)
 
-# code.interact(local=locals())
+#
+# DEPARTMENTS
+#
+
+departments = []
+
+for product in products:
+    departments.append(product["department"])
+
+unique_departments = set(departments) # removing deuplicate values
+unique_departments = list(unique_departments)
+unique_departments = sorted(unique_departments)
+
+print("--------------")
+print("THERE ARE " + str(len(unique_departments)) + " DEPARTMENTS:")
