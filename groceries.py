@@ -50,4 +50,5 @@ print("--------------")
 print("THERE ARE " + str(len(unique_departments)) + " DEPARTMENTS:")
 
 for department_name in unique_departments:
-    print(" + " + department_name.title()) #
+    count_of_products = departments.count(department_name)
+    print(" + " + department_name.title() + " (" + str(count_of_products) + " products)")
