@@ -48,3 +48,6 @@ unique_departments = sorted(unique_departments)
 
 print("--------------")
 print("THERE ARE " + str(len(unique_departments)) + " DEPARTMENTS:")
+
+for department_name in unique_departments:
+    print(" + " + department_name.title())
